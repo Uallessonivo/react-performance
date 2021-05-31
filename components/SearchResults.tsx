@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { List } from "react-virtualized";
 import { ProductItem } from "./ProductItem";
 
 type SearchResultsProps = {
@@ -22,7 +22,9 @@ export function SearchResults({
     <div>
       <h2>{totalPrice}</h2>
 
-      {results.map((product) => {
+      <List height={300} rowHeight={30} width={900} overscanRowCount={} />
+
+      {/* {results.map((product) => {
         return (
           <ProductItem
             key={product.id}
@@ -30,7 +32,7 @@ export function SearchResults({
             onAddToWishList={onAddToWishList}
           />
         );
-      })}
+      })} */}
     </div>
   );
 }
